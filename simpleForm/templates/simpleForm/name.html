@@ -1,0 +1,17 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'simpleForm/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'simpleForm/skeleton.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'simpleForm/normalize.css' %}">
+
+<form class="navigation-item" method="post">
+    <h1></h1>
+    <h4>Schnellrechner</h4>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Berechnen">
+    <h1></h1>
+    <p>
+    <output> Ergebnis: <b>{{ result }} </b></output>
+    </p>
+</form>
