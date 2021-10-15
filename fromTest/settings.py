@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-#)#p#6tw%w&m3rk+*%0ymu9cs56ljcfcnaklxz17z!*l1q(2uq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'ce-dj-form.azurewebsites.net']
 
 
 # Application definition
