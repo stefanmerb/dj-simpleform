@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from simpleForm import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     #path('', views.index, name = 'index'),
     path('admin/', admin.site.urls),
     #path('yourname/', views.get_name, name='forms'),
     path('', views.get_name, name='forms'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
